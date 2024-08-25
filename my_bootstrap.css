@@ -1,0 +1,263 @@
+/* General Rules Start */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-Ar-En-font-family);
+}
+
+/* General Rules End */
+
+/* Colours */
+
+:root {
+    --main-blue-color: #2196f3;
+    --main-blue-color-alt: #1787e0;
+    --main-green-color: #8bc34a;
+    --main-green-color-alt: #4caf50;
+    --main-yello-color: #ffeb3b;
+    --main-yello-color-alt: #ffc107;
+    --main-red-color: #f44336;
+    --white-color: #fff;
+    --off-white-color: #ececec;
+    --dark-color: #333;
+    --black-color: #000;
+    --main-Ar-font-family: "Cairo";
+    --main-En-font-family: "Poppins";
+    --main-Ar-En-font-family: "Arial", "Tahoma";
+    --main-sec-padding-top: 100px;
+    --main-sec-padding-bottom: 100px;
+    --main-transition-duration: .3s;
+}
+
+/* Tooltip */
+/* You Can Use Custom Attribute like: data-position="bottom" To Choose Position Of The Tooltip */
+/*
+For Examble:
+    <button class="my-tooltip" data-position="bottom">
+        Hover Me
+        <span class="in-my-tooltip">Hello World</span>
+    </button>
+*/
+
+
+::selection {
+    color: #fff;
+    background-color: #a79879;
+}
+
+.my-tooltip {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.my-tooltip .in-my-tooltip {
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 19px;
+    min-width: 160px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    top: -60px;
+    transition: var(--main-transition-duration) ease-out;
+    opacity: 0;
+    cursor: default;
+    text-align: center;
+    z-index: 1000;
+}
+
+.my-tooltip:hover {
+    overflow: visible;
+}
+
+.my-tooltip:hover .in-my-tooltip {
+    opacity: 1;
+}
+
+.my-tooltip .in-my-tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 10px;
+    border-color: #333 transparent transparent transparent;
+}
+
+[data-position="bottom"] .in-my-tooltip {
+    top: auto;
+    bottom: -50px;
+}
+
+[data-position="bottom"] .in-my-tooltip::before {
+    bottom: auto;
+    top: -20px;
+    border-color: transparent transparent #333 transparent;
+}
+
+/* Button Hover Effect #1 */
+/* You Can Change The Second Word By Write It In The Custom Attribute: data-text="Your Second Word" (You Can Write The First Word In <span class="in-my-button-hover-effect">Your First Word</span>) */
+/* 
+    For Example:
+
+    <a href="#" class="my-button-hover-effect" data-text="Elbanna">
+        <span class="in-my-button-hover-effect">Abdul Rahman</span>
+    </a>
+*/
+
+.my-button-hover-effect {
+    color: #8bc34a;
+    text-decoration: none;
+    display: block;
+    border: 2px solid #8bc34a;
+    position: relative;
+    width: 320px;
+    height: 80px;
+    line-height: 75px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 25px;
+}
+
+.my-button-hover-effect::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #8bc34a;
+    transform: translateX(-100%);
+    transition: .3s;
+}
+
+.my-button-hover-effect .in-my-button-hover-effect {
+    display: block;
+    transition: .3s;
+}
+
+.my-button-hover-effect:hover::before {
+    transform: translateX(0);
+}
+
+.my-button-hover-effect:hover .in-my-button-hover-effect {
+    transform: translateX(100%);
+}
+
+.my-lg-fz {
+    font-size: 3.5rem;
+}
+
+/* Container Styling */
+
+.my-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px auto;
+}
+
+/* Small Screens */
+
+@media screen and (min-width: 768px) {
+    .my-container {
+        width: 750px;
+    }
+}
+
+/* Medium Screens */
+
+@media screen and (min-width: 992px) {
+    .my-container {
+        width: 970px;
+    }
+}
+
+/* Large Screens */
+
+@media screen and (min-width: 1200px) {
+    .my-container {
+        width: 1170px;
+    }
+}
+
+.my-grid-container,
+.my-container-grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
+}
+
+.my-full-width {
+    box-shadow: 0 0 0 100vmax #ececec;
+    clip-path: inset(0 -100vmax);
+}
+
+.my-full-width-2 {
+    width: 100vw;
+    margin-inline-start: 50%;
+    transform: translateX(-50%);
+}
+
+.my-circle-border {
+    border-radius: 50%;
+}
+
+.my-circle-clip {
+    clip-path: circle();
+}
+
+.my-btn {
+    border: none;
+    outline: none;
+    padding: 7px 15px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.my-font-bold {
+    font-weight: bold;
+}
+
+.my-rounded-btn {
+    border-radius: 100vmax;
+}
+
+.sec {
+    height: 100vh;
+}
+
+.my-sec-padding {
+    padding-top: var(--main-sec-padding-top);
+    padding-bottom: var(--main-sec-padding-bottom);
+}
+
+/* Keyframes */
+
+
+@keyframes up-and-down {
+    0% , 100% {
+        top: 0;
+    }
+    50% {
+        top: -50px;
+    }
+}
+
+@keyframes bouncing {
+    0%, 10%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40%, 60% {
+        transform: translateY(-15px);
+    }
+}

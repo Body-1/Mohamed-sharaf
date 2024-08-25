@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+    
+        <!-- Title Of The Page -->
+        <title>About | Mohamed Sharaf's Web</title>
+    
+        <!-- Font Awesome Cdn Link -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <link rel="stylesheet" href="./css/all.min.css">
+        <!-- My BootStrap Css -->
+        <link rel="stylesheet" href="./css/my_bootstrap.css">
+        <!-- W3.css -->
+        <link rel="stylesheet" href="./css/W3-css.css">
+        <!-- Bootstrap Css -->
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <!-- Main Css Style -->
+        <link rel="stylesheet" href="./css/about.css">
+    </head>
+<body>
+    
+
+    <!-- Header Start -->
+
+    <header class="header">
+        <a href="https://www.facebook.com/profile.php?id=100026018782926" class="logo">
+            <img src="./images/Profile-img.jpg" alt="">
+        </a>
+
+        <div class="fa-solid fa-bars" id="menu-icon"></div>
+        <nav class="navbar">
+            <div class="margin">
+                <a href="./index.html">Home</a>
+                <a href="./about.html" class="active">About</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top: 0px; margin-bottom: 0px;">
+                        Education
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Programming</a></li>
+                        <li><a class="dropdown-item" href="#">Web Design</a></li>
+                        <li><a class="dropdown-item" href="#">Cyper Security</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Frontend</a></li>
+                        <li><a class="dropdown-item" href="#">Backend</a></li>
+                    </ul>
+                </li>
+                <a href="#">Companies</a>
+                <a href="./students.html">My Students</a>
+                <a href="#">Portfolio</a>
+                <a href="./contact.html">Contact</a>
+    
+                <span class="active-nav"></span>
+            </div>
+
+            <div class="last-box">
+                <img id="myImage" src="./images/England-flag.png" width="10px">
+                <select id="mySelect" onchange="changeImage()">
+                    <option value="./images/England-flag.png">English</option>
+                    <option value="./images/pngegg.png">Arabic</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Header End -->
+
+    <!-- Top Section Start -->
+
+    <div class="top" id="top">
+        <div class="topic">
+            <h2>About <br> <span>Mohamed Sharaf</span></h2>
+        </div>
+    </div>
+    
+    <!-- Top Section End -->
+
+    <!-- About Section Start -->
+
+    <div class="about" id="about">
+        <h2 class="heading" style="margin-bottom: 5.5rem;">About <span class="blue-text">Me!</span></h2>
+        <div class="container">
+            <div class="row">
+                <div class="img-box col-lg-4">
+                    <img src="./images/IMG-20240222-WA0028.jpg" alt="My Image">
+                </div>
+                <div class="content col-lg-8">
+                    <h1 class="my-lg-fz mb-4">Informations About <span class="blue-text">Me:</span></h1>
+                    <p class="my-lead">Hi, I'm Mohamed Sharaf, Programming, Information Security Engineer, Trainer, Frontend And Backend Developer, I Specialize In Many Fields, You Can See More Informations About Me By Clicking On About Me! For the past five years, wait for web programming. I have experience in web development and e-commerce solutions with the ability to manage the software development cycle together. Building the Frontend and Backend of a website or application at the same time... My skills include: HTML5, Css3, Bootstrap, Javascript, jQuery, PHP, MysQl, Laravel, and a cybersecurity trainer. I'm Passionate about doing great things and learning something new every day. If you need any help you can contact me by clicking on Contact Me!</p>
+                    <h2 class="fs-1 mt-5">My <span class="blue-text">Skills:</span></h2>
+                    <div class="skills mt-5">
+                        <div class="col">
+                            <span>1- HTML5</span>
+                            <span>2- Css3</span>
+                            <span>3- Bootstrap</span>
+                        </div>
+
+                        <div class="col">
+                            <span>4- Javascript</span>
+                            <span>5- jQuery</span>
+                            <span>6- PHP</span>
+                        </div>
+
+                        <div class="col">
+                            <span>7- MysQl</span>
+                            <span>8- Laravel</span>
+                            <span>9- Cybersecurity trainer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- About Section End -->
+        
+    <!-- Contact Start -->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span class="blue-text">Me!</span><span class="animate"></span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email Address" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Mobile Number" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" required>
+                    <span class="focus"></span>
+                </div>
+            </div>        
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <span class="focus"></span>
+            </div>
+
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+        <div class="blur"></div>
+        <div class="blur-2"></div>
+    </section>
+    
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by <b>Abdul Rahman Elbanna</b> | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <span><i class="fa-solid fa-arrow-up"></i></span>
+        </div>
+    </footer>
+    
+    <!-- Footer End -->
+    
+    <script src="./js/query-3.7.0.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./main.js"></script>
+    <script src="./js/about.js"></script>
+</body>
+</html>
